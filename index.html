@@ -1,59 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Loopstudios landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>obika chibuike | Loopstudios landing page</title>
+  </head>
+  <body>
+    <header class="padding">
+      <div class="heading flex">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <img src="./images/icon-hamburger.svg" alt="" class="hamburger" />
+        <!-- HEADER LINKS -->
+        <ul class="header-links">
+          <div class="links flex">
+            <li><a href="">About</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href=""> Events</a></li>
+            <li><a href=""> Products</a></li>
+            <li><a href=""> Support </a></li>
+          </div>
+         
+        </ul>
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  About
-  Careers
-  Events
-  Products
-  Support
+      <div class="banner">
+        <h1>Immersive experiences that deliver</h1>
+      </div>
+    </header>
 
-  Immersive experiences that deliver
+    <section class="sect-one  flex">
+      <div class="sect-one-img">
+        <img src="./images/mobile/image-interactive.jpg" alt="" />
+      </div>
 
-  The leader in interactive VR
+      <div class="sect-one-text">
+        <h1>The leader in interactive VR</h1>
+        <p class="text">
+          Founded in 2011, Loopstudios has been producing world-class virtual
+          reality projects for some of the best companies around the globe. Our
+          award-winning creations have transformed businesses through digital
+          experiences that bind to their brand.
+        </p>
+      </div>
+    </section>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+    <section class="sect-two padding">
+      <div class="sect-two-header flex ">
+        <h1>Our creations</h1>
+        <button type="menu">see All</button>
+      </div>
 
-  Our creations
+      <div class="sect-two-grid">
+        <div class="grid-one grid">
+          <p>Deep earth</p>
+        </div>
 
-  See all
+        <div class="grid-two grid">
+          <p>night arcade</p>
+        </div>
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
+        <div class="grid-three grid">
+          <p>soccer team vr</p>
+        </div>
 
-  About
-  Careers
-  Events
-  Products
-  Support
+        <div class="grid-four grid">
+          <p>the grid</p>
+        </div>
 
-  © 2021 Loopstudios. All rights reserved.
+        <div class="grid-five grid">
+          <p>from up above vr</p>
+        </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="grid-six grid">
+          <p>pocket borealis</p>
+        </div>
+
+        <div class="grid-seven grid">
+          <p>the curiosity</p>
+        </div>
+
+        <div class="grid-eight grid">
+          <p>make it fisheye</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot-one">
+        <div>
+          <img src="./images/logo.svg" alt="" />
+        </div>
+
+        <div class="foot-links">
+          <img src="./images/icon-facebook.svg" alt="" />
+          <img src="./images/icon-twitter.svg" alt="" />
+          <img src="./images/icon-pinterest.svg" alt="" />
+          <img src="./images/icon-instagram.svg" alt="" />
+        </div>
+      </div>
+
+      <!-- FOOT LINKS -->
+
+      <div class="foot-two">
+        <ul class="footer-links">
+          <li><a href="">About</a></li>
+          <li><a href="">Careers</a></li>
+          <li><a href=""> Events</a></li>
+          <li><a href=""> Products</a></li>
+          <li><a href=""> Support </a></li>
+        </ul>
+
+        <div class="copyright">
+          <p>© 2021 Loopstudios. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
 </html>
