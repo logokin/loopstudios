@@ -43,7 +43,7 @@ header {
   background: url(./images/desktop/image-hero.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 90vh;
   height: 100%;
   padding-bottom: 9rem;
 }
@@ -174,22 +174,25 @@ header {
   outline: none;
   border: 1px solid var(--Dark-Gray);
 }
-
+.but {
+  display: none;
+}
 .sect-two-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+   
 }
 
 .grid {
-  min-height: 60vh;
+   min-height: 60vh;
   max-width: 100%;
   background-position: center;
   background-size: cover;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
 }
 .grid p {
   width: 45%;
@@ -223,6 +226,71 @@ header {
   background: url(./images/desktop/image-fisheye.jpg);
 }
 
+footer {
+  background: var(--Black);
+  margin-top: 4rem;
+  max-height: 50%;
+}
+
+.foot-one {
+  padding-top: 5rem;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.foot-one img {
+  margin: 0 10px;
+}
+
+.foot-two {
+  width: 100%;
+  padding-bottom: 5rem;
+}
+.foot-links {
+}
+.foot-links img {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.foot-links img:hover {
+  border-bottom: 2px solid white;
+}
+.footer-links {
+  width: 100%;
+  max-width: 50%;
+  position: relative;
+}
+.footer-links li a {
+  position: relative;
+}
+.footer-links li a::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 13px;
+  width: 50%;
+  padding: 2px;
+  background-color: white;
+  z-index: 100;
+  transform-origin: center;
+  opacity: 0;
+  transition: 0.3s all ease;
+  transform: scaleX(0);
+}
+.footer-links li a:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.one {
+  display: none;
+}
+.copyright {
+  color: var(--White);
+}
 @media screen and (max-width: 960px) {
   .header-links {
     width: 100%;
@@ -241,6 +309,12 @@ header {
 }
 
 @media screen and (max-width: 800px) {
+  header {
+    min-height: 100vh;
+  }
+  .banner h1 {
+    font-size: 2.4rem;
+  }
   .sect-one {
     flex-direction: column;
   }
@@ -249,8 +323,6 @@ header {
     padding-left: 3rem;
   }
   .sect-one-text {
-    border: 2px purple solid;
-    box-shadow: 0px 0px 8px purple;
     width: 70%;
     padding: 1rem;
     z-index: 30;
@@ -262,11 +334,19 @@ header {
 
     background-color: white;
   }
-
-  
-
+  .foot-two {
+    flex-direction: column;
+  }
+  .footer-links {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (max-width: 600px) {
+  header {
+    min-height: 100vh;
+  }
   .heading {
     flex-direction: column;
   }
@@ -284,13 +364,15 @@ header {
     left: 0;
     background-color: black;
     height: 100%;
-    z-index: -100;
+    width: 100%;
     padding: 5rem 1rem;
-    opacity: 0;
-    transition: 0.6s linear all;
+    transform: translateY(-1900px);
+    transform-origin: top;
+    transition: 0.1s linear all;
   }
   .header-links-show {
-    opacity: 1;
+      
+    transform: translateY(0px);
     z-index: 100;
   }
   .links {
@@ -323,6 +405,68 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
+  .sect-two-header h1 {
+    font-size: 2rem;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .sect-two-header button {
+    display: none;
+  }
+
+  .but {
+    display: block;
+    background-color: transparent;
+    padding: 6px 24px;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid var(--Dark-Gray);
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+  .foot-links {
+    display: none;
+  }
+
+  .foot-one {
+    padding-top: 5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+  .foot-one img {
+    width: 100%;
+  }
+  .one {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .one img{
+    margin: 10px;
+
+  }
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-links li {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.6rem;
+  }
+  .footer-links li a::after {
+    top: 30px;
+  }
+  .copyright {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -347,15 +491,49 @@ header {
   .padding {
     padding: 0 1rem;
   }
+  .sect-one {
+    margin-top: 3rem;
+    margin-bottom: 3.7rem;
+  }
+  .sect-one-img {
+    width: 90%;
+    padding-left: 0rem;
+    margin: 0 auto;
+  }
+  .sect-one-text {
+    border: none;
+    box-shadow: none;
+    width: 90%;
+    margin: 0 auto;
+
+    /* padding: 1rem; */
+    padding: 1.4rem;
+  }
+  .sect-one-text h1 {
+    font-size: 2rem;
+    text-align: center;
+    word-spacing: 5px;
+    margin: 0 auto;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+    width: 75%;
+  }
+
+  .sect-one-text p {
+    text-align: center;
+  }
 
   .sect-two-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 15px;
   }
-  .grid{
-      min-height: 0vh;
-      /* height: 100%; */
+  .grid {
+    /* min-height: 40px; */
+    border-bottom: 10px solid purple;
+    background-position: -90% -50%;
+   max-height: 1vh;
+    height: 100%;
   }
 
   .grid-one {
@@ -381,5 +559,19 @@ header {
   }
   .grid-eight {
     background: url(./images/mobile/image-fisheye.jpg);
+  }
+  .grid p {
+    width: 20%;
+    font-family: "Josefin Sans", sans-serif;
+    padding-left: 20px;
+    margin-top: 12rem;
+  }
+  .sect-two-header h1{
+      width: 100%;
+  }
+  .links {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0rem;
   }
 }
